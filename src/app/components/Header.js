@@ -17,7 +17,12 @@ import { useMediaQuery } from "react-responsive";
 // icons
 import { BiMenuAltRight, BiX } from "react-icons/bi";
 
+// search context
+import { SearchContext } from "../context/search";
+
 export default function Header() {
+  const { setSearchActive } = useContext(SearchContext);
+
   const [header, setHeader] = useState(false);
   const [nav, setNav] = useState(false);
 
@@ -32,6 +37,13 @@ export default function Header() {
         setHeader(true);
       } else {
         setHeader(false);
+      }
+
+      // search
+      if (window.scrollY > 800) {
+        setSearchActive(true);
+      } else {
+        setSearchActive(false);
       }
     };
 
@@ -101,36 +113,37 @@ export default function Header() {
           </Link>
           <Link
             className="cursor-pointer"
-            to="about"
-            activeClass="why"
+            to="why"
+            activeClass="active"
             smooth={desctopMode}
             spy={true}>
             Why us
           </Link>
           <Link
             className="cursor-pointer"
-            to="about"
-            activeClass="testimonials"
+            to="testimonial"
+            activeClass="active"
             smooth={desctopMode}
             spy={true}>
             Testimonials
           </Link>
           <Link
             className="cursor-pointer"
-            to="about"
-            activeClass="contacts"
+            to="contacts"
+            activeClass="active"
             smooth={desctopMode}
             spy={true}>
-            contacts
+            Contacts
           </Link>
           <Link
             className="xl:hidden btn btn-primary btn-sm max-w-[164px] mx-auto"
-            to="about"
+            to="/"
             activeClass="/"
             smooth={desctopMode}
             spy={true}>
             See all cars
           </Link>
+          <SearchMobile />
         </nav>
       </div>
     </header>
