@@ -12,7 +12,7 @@ import Why from "./components/Why";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="max-w-[1920px bg-white mx-auto relative overflow-hidden">
       <Header />
       <Hero />
       <Cars />
@@ -22,6 +22,7 @@ export default function Home() {
       <Cta />
       <Footer />
       <BackToTopBtn />
+      <div className="h-[4000px]"></div>
     </main>
   )
 }
