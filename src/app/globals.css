@@ -18,9 +18,17 @@
   font-size: 16px;
 }
 
-.rdrDayNumber, .rdrWeekDay {
+.rdrDayNumber,
+.rdrWeekDay {
   color: #1e1f23 !important;
-  font-weight: 500 !important
+  font-weight: 500 !important;
+}
+
+/* swiper styles */
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horzontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+    background-color: #f13024;
 }
 
 @layer base {
@@ -43,7 +51,7 @@
     @apply text-base xl:text-xl xl:leading-8;
   }
   .section {
-    @apply w-full h-screen pt-[60px] xl:pt-[120px]
+    @apply w-full h-screen pt-[60px] xl:pt-[120px];
   }
   .btn {
     @apply rounded-[10px] w-full uppercase font-medium text-white tracking-[2px] text-[13px] flex justify-center
