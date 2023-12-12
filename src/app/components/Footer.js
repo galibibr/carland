@@ -20,7 +20,7 @@ import { Link } from "react-scroll";
 
 export default function Footer() {
   return (
-    <footer className="pt-20 bg-white z-20">
+    <footer className="pt-20 bg-white z-20" id="contacts">
       <div className="container mx-auto mb-24">
         {/* grid */}
         <motion.div
@@ -39,7 +39,9 @@ export default function Footer() {
               <Image src={"/icons/logo.svg"} width={200} height={200} alt="" />
             </Link>
             {/* text */}
-            <div className="text-secondary">Lorem ipsum dolor sit amet, components adipisicing alit.</div>
+            <div className="text-secondary">
+              Lorem ipsum dolor sit amet, components adipisicing alit.
+            </div>
             {/* phone & email */}
             <div className="flex flex-col gap-y-4 font-semibold">
               {/* phone */}
@@ -48,7 +50,7 @@ export default function Footer() {
                 <div className="font-medium">(123)456-7890</div>
               </div>
               <div className="flex items-center gap-x-[10px]">
-                <FaEnvelope className="font-medium"/>
+                <FaEnvelope className="font-medium" />
                 <div>office@carland.com</div>
               </div>
             </div>
@@ -58,11 +60,21 @@ export default function Footer() {
             <div>
               <h3 className="h3 font-bold mb-8">Company</h3>
               <ul className="flex flex-col gap-y-4 font-semibold">
-                <li><a href="">New York</a></li>
-                <li><a href="">Careers</a></li>
-                <li><a href="">Mobile</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">How we work</a></li>
+                <li>
+                  <a href="">New York</a>
+                </li>
+                <li>
+                  <a href="">Careers</a>
+                </li>
+                <li>
+                  <a href="">Mobile</a>
+                </li>
+                <li>
+                  <a href="">Blog</a>
+                </li>
+                <li>
+                  <a href="">How we work</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -84,9 +96,27 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div>4</div>
+          {/* newsletter */}
+          <div className="flex-1">
+            <h3 className="h3 font-bold mb-8">Newsletter</h3>
+            <div className="mb-9 text-secondary">
+              Lorem ipese dolor sit conscletere asliceting elit.
+            </div>
+            {/* form */}
+            <form className="flex gap-x-2 h-14">
+              <input
+                type="text"
+                placeholder="Your email"
+                className="out bg-white h-full border rounded-lg pl-4 focus:border-accent"
+              />
+              <button type="submit" className="btn btn-sm btn-accent w-24">
+                Submit
+              </button>
+            </form>
+          </div>
         </motion.div>
       </div>
+      <Copyright />
     </footer>
   );
 }
