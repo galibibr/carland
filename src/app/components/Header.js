@@ -88,6 +88,7 @@ export default function Header() {
             nav ? "max-h-max py-8 px-4 xl:py-0 xl:px-0" : "max-h-0 xl:max-h-max"
           } flex flex-col w-full bg-white gap-y-6 overflow-hidden font-bold xl:font-medium xl:flex-row xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-300 text-center xl:text-left uppercase text-sm xl:text-[15px] xl:normal-case`}>
           <Link
+            onClick={() => setNav(false)}
             className="cursor-pointer"
             to="home"
             activeClass="active"
@@ -96,6 +97,7 @@ export default function Header() {
             Home
           </Link>
           <Link
+            onClick={() => setNav(false)}
             className="cursor-pointer"
             to="cars"
             activeClass="active"
@@ -104,6 +106,7 @@ export default function Header() {
             Cars
           </Link>
           <Link
+            onClick={() => setNav(false)}
             className="cursor-pointer"
             to="about"
             activeClass="active"
@@ -112,6 +115,7 @@ export default function Header() {
             About
           </Link>
           <Link
+            onClick={() => setNav(false)}
             className="cursor-pointer"
             to="why"
             activeClass="active"
@@ -120,6 +124,7 @@ export default function Header() {
             Why us
           </Link>
           <Link
+            onClick={() => setNav(false)}
             className="cursor-pointer"
             to="testimonial"
             activeClass="active"
@@ -128,6 +133,7 @@ export default function Header() {
             Testimonials
           </Link>
           <Link
+            onClick={() => setNav(false)}
             className="cursor-pointer"
             to="contacts"
             activeClass="active"
@@ -136,7 +142,7 @@ export default function Header() {
             Contacts
           </Link>
           <Link
-            className="xl:hidden btn btn-primary btn-sm max-w-[164px] mx-auto"
+            className="xl:hidden cursor-pointer btn btn-primary btn-sm max-w-[164px] mx-auto"
             to="/"
             activeClass="/"
             smooth={desctopMode}

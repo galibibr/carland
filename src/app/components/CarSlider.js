@@ -145,7 +145,7 @@ export default function CarSlider() {
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: false, amount: 0.2 }}
-      className="container mx-auto">
+      className=" mx-auto mt-8">
       <Swiper
         breakpoints={{
           320: { slidesPerView: 1, spaceBetween: 15 },
@@ -155,8 +155,14 @@ export default function CarSlider() {
         {cars.map((car, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="max-w-[385px] mx-auto sm:mx-0">
-                <Image src={car.image} width={380} height={284} alt="car" />
+              <div className="max-w-[385px] mx-auto sm:mx-0 border p-3 rounded-[16px] hover:border-gray-300 hover:bg-gray-50 duration-300">
+                <Image
+                  src={car.image}
+                  width={380}
+                  height={284}
+                  alt="car"
+                  className="hover:scale-110 duration-300 hover:-rotate-2 hover:drop-shadow-2xl"
+                />
                 <div className="flex justify-between">
                   <div>
                     <div className="text-[13px] text-secondary uppercase">
